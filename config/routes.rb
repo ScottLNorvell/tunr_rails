@@ -3,8 +3,9 @@ TunrRails::Application.routes.draw do
   root to: "artists#index"
 
   resources :artists 
-  resources :albums
-  resources :songs
+  resources :albums do
+  	resources :songs  	
+  end
 
 
   # get "/songs" => 'songs#index'
