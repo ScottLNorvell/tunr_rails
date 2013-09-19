@@ -1,0 +1,19 @@
+<h1>Albums</h1>
+
+<ul class='albums'>
+	<% @albums.each do |album| %>
+		<li>
+			<h1><%= album.title %></h1>
+			<p>
+				<%= album.genre %>
+			</p>
+			<p>
+				<%= album.songs.first.title %>
+			</p>
+			<p>
+				<%= album.artist.name %>
+			</p>
+		</li>
+	<% end %>
+
+</ul>
