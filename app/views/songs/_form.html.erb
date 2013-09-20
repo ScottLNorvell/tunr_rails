@@ -1,10 +1,12 @@
-<%= form_for @song do |f| %>
+<div class="four columns">
+	<%= form_for @song do |f| %>
 
-<%= f.label :title %>
-<%= f.text_field :title %>
-<%= f.hidden_field :album_id, value: @album_id %>
+	<%= f.label :title %>
+	<%= f.text_field :title %>
+	<%= f.hidden_field :album_id, value: @album_id %>
 
-<%= f.submit %>
+	<%= f.submit %>
 
-<% end %>
+	<% end %>
+</div>
 

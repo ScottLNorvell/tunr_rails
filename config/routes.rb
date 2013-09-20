@@ -7,11 +7,11 @@ TunrRails::Application.routes.draw do
   	resources :songs, only: [:new, :edit]  	
   end
 
-  resources :songs, only: [:index, :create, :update, :show]
+  resources :songs, only: [:index, :create, :update, :show, :edit]
 
-  post "/artists/:id/destroy" => 'artists#destroy', as: 'artist_destroy'
-  post "/albums/:id/destroy" => 'albums#destroy', as: 'album_destroy'
-  post "/songs/:id/destroy" => 'songs#destroy', as: 'song_destroy'
+  get "/artists/:id/destroy" => 'artists#destroy', as: 'artist_destroy'
+  get "/albums/:id/destroy" => 'albums#destroy', as: 'album_destroy'
+  get "/songs/:id/destroy" => 'songs#destroy', as: 'song_destroy'
 
   # get "/songs" => 'songs#index'
   # get "/albums" => 'albums#index'

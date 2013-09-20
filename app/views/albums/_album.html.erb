@@ -1,9 +1,19 @@
-<h3><%= album.title %></h3>
-<p><%= album.genre %></p>
-<p><%= album.artist.name %></p>
-<h4>SONGZ</h4>
+<h3><%= link_to album.title, album_path( album ) %></h3>
+<hr>
+<div class="description">
+	<h5>Genre:</h5>
+	<p><%= album.genre %></p>
+	<h5>Artist:</h5>
+	<p><%= album.artist.name %></p>
+</div>
+<h5>SONGZ</h5>
+<div class="description">
 <% album.songs.each do |song| %>
 
-<p><%= song.title %></p>
+<p>-<%= link_to song.title, song_path( song ) %></p>
 
 <% end %>
+</div>
+<div class="edit-link">
+<%= link_to '[edit]', edit_album_path( album ) %>
+</div>

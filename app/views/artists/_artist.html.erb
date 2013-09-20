@@ -1,8 +1,18 @@
-<h3><%= artist.name %></h3>
+<h3><%= link_to artist.name, artist_path( artist ) %></h3>
+<hr>
+<!-- <h4 class="description-title">Bio:</h4> -->
+<div class="description">
 <p><%= artist.bio %></p>
+</div>
 
-<h4>Albums by <%= artist.name %></h4>
+<h5 class="description-title">Albums:</h5>
+<div class="description">
 <% artist.albums.each do |album| %>
-<%= link_to album.title, album_path( album ) %>
+-<%= link_to album.title, album_path( album ) %>
 
 <% end %>
+
+</div>
+<div class="edit-link">
+<%= link_to '[edit]', edit_artist_path( artist ) %>
+</div>

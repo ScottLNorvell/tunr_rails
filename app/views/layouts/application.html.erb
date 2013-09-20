@@ -2,16 +2,49 @@
 <html>
 <head>
   <title>TunrRails</title>
+  <%= stylesheet_link_tag    "base", :media => "all" %>
+  <%= stylesheet_link_tag    "skeleton", :media => "all" %>
+  <%= stylesheet_link_tag    "layout", :media => "all" %>
+
   <%= stylesheet_link_tag    "application", :media => "all" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
 </head>
 <body>
-<nav>
-	<%= link_to "Artists", artists_path %>
-	<%= link_to 'Albums', albums_path %>
-</nav>
-<%= yield %>
+	<div class="container">
+		<header class="sixteen columns">
+			<div id="header-content">
+				<div class="row">
+					<h1 class="title sixteen columns alpha omega remove-bottom">Tunr: type in your tunez</h1>
+				</div>
+				<div class="row">
+					<div class="offset-by-three thirteen columns alpha omega">
+						<div class="row remove-bottom">
+							<nav>
+
+								<div class="five columns alpha" >
+									<%= link_to "Artists", artists_path, class: "nav-link" %>	
+								</div>
+								
+								<div class="five columns omega" >
+									<%= link_to 'Albums', albums_path, class: "nav-link" %>									
+								</div>
+
+							</nav>
+						</div>
+					</div>
+				</div>
+			</div>
+		</header>
+		<br class="clear">
+		
+		<%= yield %>
+		
+		<br class="clear add-bottom">
+		<hr>
+		<div class="offset-by-six four columns">
+			<p class="best-friend">Tunr is your best friend...</p>
+		</div>
 
 </body>
 </html>

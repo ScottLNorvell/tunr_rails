@@ -1,3 +1,11 @@
-<h3><%= song.title %></h3>
-<p>ALBUM: <%= song.album.title %></p>
-<p>ARTIST: <%= song.artist.name %></p>
+<h3><%= link_to song.title, song_path( song )%></h3>
+<hr>
+<div class="description">
+	<h5>Album:</h5>
+	<p><%= song.album.title %></p>
+	<h5>Artist:</h5>
+	<p><%= song.artist.name %></p>
+</div>
+<div class="edit-link">
+<%= link_to '[edit]', edit_song_path( song ) %>
+</div>
