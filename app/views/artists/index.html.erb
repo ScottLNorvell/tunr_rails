@@ -1,13 +1,3 @@
 <h1>Artists</h1>
 
-<ul class='artists'>
-	<% @artists.each do |artist| %>
-		<li>
-			<h1><%= artist.name %></h1>
-			<p>
-				<%= artist.bio %>
-			</p>
-		</li>
-	<% end %>
-
-</ul>
+<%= render @artists %>

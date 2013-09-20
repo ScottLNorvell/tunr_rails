@@ -1,0 +1,8 @@
+<h3><%= artist.name %></h3>
+<p><%= artist.bio %></p>
+
+<h4>Albums by <%= artist.name %></h4>
+<% artist.albums.each do |album| %>
+<%= link_to album.title, album_path( album ) %>
+
+<% end %>

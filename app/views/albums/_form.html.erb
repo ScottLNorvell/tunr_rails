@@ -1,0 +1,11 @@
+<%= form_for @album do |f| %>
+
+<%= f.label :title %>
+<%= f.text_field :title %>
+<%= f.label :genre %>
+<%= f.text_field :genre %>
+<%= f.label :artist_id %>
+<%= f.select :artist_id, options_for_select( @artists_select ) %>
+<%= f.submit %>
+
+<% end %>
