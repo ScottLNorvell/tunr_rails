@@ -29,7 +29,7 @@ class AlbumsController < ApplicationController
 
 	def edit
 		@album = Album.find params[:id] 
-		@artists_select = Artist.all
+		@artists_select = Artist.all.map { |a| [a.name, a.id] }
 	end
 
 	def update
